@@ -7,7 +7,7 @@ This repository contains CMake modules used within Measurement Kit.
 1. embed it as a git submodule into your sources tree:
 
 ```
-git submodule add git@github.com:measurement-kit/cmake-modules cmake/Modules
+git submodule add https://github.com/measurement-kit/cmake-modules cmake/Modules
 ```
 
 2. modify your `CMakeLists.txt` to use this submodule:
