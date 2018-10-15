@@ -6,6 +6,14 @@ function(MkDownloadAdishavitArgh)
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
+function(MkDownloadCaBundle)
+  message(STATUS "Downloading CA bundle")
+  file(DOWNLOAD https://curl.haxx.se/ca/cacert-2018-06-20.pem
+       "${CMAKE_CURRENT_BINARY_DIR}/ca-bundle.pem" EXPECTED_HASH
+       SHA256=238823cd92d3bcdd67c1c278536d6c282dd6b526ee6ee97efbf00ef31d8c5d79
+       TLS_VERIFY ON SHOW_PROGRESS)
+endfunction()
+
 function(MkDownloadNlohmannJson)
   message(STATUS "Downloading nlohmann/json")
   file(DOWNLOAD https://raw.githubusercontent.com/nlohmann/json/v3.1.2/single_include/nlohmann/json.hpp
