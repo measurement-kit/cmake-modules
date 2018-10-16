@@ -61,7 +61,9 @@ Sets the following variables:
 
 - `MK_WINDOWS_CURL_DEFINITIONS`, to be passed to `add_definitions()`;
 
-- `MK_WINDOWS_CURL_LIBS`, to be included when linking with cURL.
+- `MK_WINDOWS_CURL_EXTRA_LINK_LIBS`, extra libraries to be linked when
+  linking with cURL, which is static, hence we need to specify these
+  required libraries explicitly.
 
 ```cmake
 macro(MkSetCompilerFlags)
