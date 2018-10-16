@@ -30,6 +30,14 @@ function(MkDownloadCatchorgCatch2)
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
+function(MkDownloadMeasurementKitLibcurlx)
+  message(STATUS "Downloading measurement-kit/libcurlx")
+  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/libcurlx/v0.2.0/libcurlx.h
+       "${CMAKE_CURRENT_BINARY_DIR}/libcurlx.h" EXPECTED_HASH
+       SHA256=e1c925fafd481e70bd2133b4d460fab95266e8b47e4c5979e402ad472c126737
+       TLS_VERIFY ON SHOW_PROGRESS)
+endfunction()
+
 macro(MkSetCompilerFlags)
   set(THREADS_PREFER_PTHREAD_FLAG ON)
   find_package(Threads REQUIRED)
