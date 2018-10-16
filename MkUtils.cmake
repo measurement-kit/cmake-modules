@@ -14,6 +14,53 @@ function(MkDownloadCaBundle)
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
+function(MkDownloadGeoIP)
+  message(STATUS "Downloading GeoIP databases")
+  # Variables (you should change them when a new version is available)
+  set(COUNTRY_SHA c8cb2ffef62e81518a0bbf992c94c4a3adc2d36e4317d9d11987a464698c4c4c)
+  set(COUNTRY_DIRNAME "GeoLite2-Country_20181009")
+  set(ASN_SHA 02015c3f5cfcdc1df3bf3852365e2b2757340a86b67673ab82e61239bbaed97a)
+  set(ASN_DIRNAME "GeoLite2-ASN_20181009")
+  # Country
+  file(DOWNLOAD https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz
+       "${CMAKE_CURRENT_BINARY_DIR}/geolite2-country.tar.gz" EXPECTED_HASH
+       SHA256=${COUNTRY_SHA}
+       TLS_VERIFY ON SHOW_PROGRESS)
+  execute_process(COMMAND ${CMAKE_COMMAND} -E tar xf "geolite2-country.tar.gz"
+          WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
+          RESULT_VARIABLE TAR_FAILURE)
+  if("${TAR_FAILURE}")
+    message(FATAL_ERROR "Cannot unpack GeoIP country: ${TAR_FAILURE}")
+  endif()
+  execute_process(COMMAND ${CMAKE_COMMAND} -E rename
+          "${COUNTRY_DIRNAME}/GeoLite2-Country.mmdb"
+          "country.mmdb"
+          WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
+          RESULT_VARIABLE MOVE_FAILURE)
+  if("${MOVE_FAILURE}")
+    message(FATAL_ERROR "Cannot move GeoIP country: ${MOVE_FAILURE}")
+  endif()
+  # ASN
+  file(DOWNLOAD https://geolite.maxmind.com/download/geoip/database/GeoLite2-ASN.tar.gz
+       "${CMAKE_CURRENT_BINARY_DIR}/geolite2-asn.tar.gz" EXPECTED_HASH
+       SHA256=${ASN_SHA}
+       TLS_VERIFY ON SHOW_PROGRESS)
+  execute_process(COMMAND ${CMAKE_COMMAND} -E tar xf "geolite2-asn.tar.gz"
+          WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
+          RESULT_VARIABLE TAR_FAILURE)
+  if("${TAR_FAILURE}")
+    message(FATAL_ERROR "Cannot unpack GeoIP ASN: ${TAR_FAILURE}")
+  endif()
+  execute_process(COMMAND ${CMAKE_COMMAND} -E rename
+          "${ASN_DIRNAME}/GeoLite2-ASN.mmdb"
+          "asn.mmdb"
+          WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
+          RESULT_VARIABLE MOVE_FAILURE)
+  if("${MOVE_FAILURE}")
+    message(FATAL_ERROR "Cannot move GeoIP ASN: ${MOVE_FAILURE}")
+  endif()
+endfunction()
+
 function(MkDownloadNlohmannJson)
   message(STATUS "Downloading nlohmann/json")
   file(DOWNLOAD https://raw.githubusercontent.com/nlohmann/json/v3.1.2/single_include/nlohmann/json.hpp
