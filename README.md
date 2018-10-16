@@ -43,6 +43,27 @@ Downloads the latest version of [github.com/catchorg/Catch2](
 https://github.com/catchorg/Catch2).
 
 ```cmake
+function(MkDownloadMeasurementKitPrebuiltWindowsCurl)
+```
+
+Downloads the latest version of [github.com/curl/curl](
+https://github.com/curl/curl) precompiled by us for the MSVC compiler. As
+such, this code should only be executed when compiling for MSVC.
+
+The archive will be downloaded and extracted in the current binary directory
+creating a `MK_DIST/windows/curl/$version/$arch` tree.
+
+Sets the following variables:
+
+- `MK_WINDOWS_CURL_INCLUDE_PATH`, to be added to `CMAKE_INCLUDE_PATH`;
+
+- `MK_WINDOWS_CURL_LIBRARY_PATH`, to be added to `CMAKE_LIBRARY_PATH`;
+
+- `MK_WINDOWS_CURL_DEFINITIONS`, to be passed to `add_definitions()`;
+
+- `MK_WINDOWS_CURL_LIBS`, to be included when linking with cURL.
+
+```cmake
 macro(MkSetCompilerFlags)
 ```
 
