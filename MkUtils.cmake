@@ -79,9 +79,9 @@ endfunction()
 
 function(MkDownloadMeasurementKitLibcurlx)
   message(STATUS "Downloading measurement-kit/libcurlx")
-  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/libcurlx/v0.2.0/libcurlx.h
+  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/libcurlx/v0.4.0/libcurlx.h
        "${CMAKE_CURRENT_BINARY_DIR}/libcurlx.h" EXPECTED_HASH
-       SHA256=e1c925fafd481e70bd2133b4d460fab95266e8b47e4c5979e402ad472c126737
+       SHA256=b2fd89ad5fa71c3d7a31d134ca0b4b2517e475879eaee33de80e9655b6337431
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
