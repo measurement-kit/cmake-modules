@@ -66,6 +66,24 @@ Sets the following variables:
   required libraries explicitly.
 
 ```cmake
+function(MkDownloadMeasurementKitPrebuiltWindowsLibmaxminddb)
+```
+
+Downloads the latest version of [github.com/maxmind/libmaxminddb](
+https://github.com/maxmind/libmaxminddb) precompiled by us for the MSVC
+compiler. As such, this code should only be executed when compiling
+for MSVC.
+
+The archive will be downloaded and extracted in the current binary directory
+creating a `MK_DIST/windows/libmaxminddb/$version/$arch` tree.
+
+Sets the following variables:
+
+- `MK_WINDOWS_LIBMAXMINDDB_INCLUDE_PATH`, to be added to `CMAKE_INCLUDE_PATH`;
+
+- `MK_WINDOWS_LIBMAXMINDDB_LIBRARY_PATH`, to be added to `CMAKE_LIBRARY_PATH`;
+
+```cmake
 macro(MkSetCompilerFlags)
 ```
 

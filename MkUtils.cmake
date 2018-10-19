@@ -120,6 +120,13 @@ function(MkDownloadMeasurementKitPrebuiltWindowsCurl)
   set(MK_WINDOWS_CURL_EXTRA_LINK_LIBS Crypt32 PARENT_SCOPE)
 endfunction()
 
+function(MkDownloadMeasurementKitPrebuiltWindowsLibmaxminddb)
+  MkDownloadMeasurementKitPrebuiltWindows_("libmaxminddb" "1.3.2-2"
+    "542933912814ac518037bd26083d0bba9daf68084f43c5cf2d7ec944d62b9ebb")
+  set(MK_WINDOWS_LIBMAXMINDDB_INCLUDE_PATH "${PREFIX_}/include" PARENT_SCOPE)
+  set(MK_WINDOWS_LIBMAXMINDDB_LIBRARY_PATH "${PREFIX_}/lib" PARENT_SCOPE)
+endfunction()
+
 macro(MkSetCompilerFlags)
   set(THREADS_PREFER_PTHREAD_FLAG ON)
   find_package(Threads REQUIRED)
