@@ -15,7 +15,7 @@ function(MkDownloadCaBundle)
 endfunction()
 
 function(MkDownloadGeoIP)
-  message(STATUS "Downloading GeoIP databases")
+  message(STATUS "Downloading GeoLite2 databases")
   # Variables (you should change them when a new version is available)
   set(COUNTRY_SHA 9ff02b091d5cce7967b080b5ebeec63f9f691308da946db913985eb5296aa8ee)
   set(COUNTRY_DIRNAME "GeoLite2-Country_20181016")
@@ -77,11 +77,11 @@ function(MkDownloadCatchorgCatch2)
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
-function(MkDownloadMeasurementKitLibcurlx)
-  message(STATUS "Downloading measurement-kit/libcurlx")
-  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/libcurlx/v0.4.0/libcurlx.h
-       "${CMAKE_CURRENT_BINARY_DIR}/libcurlx.h" EXPECTED_HASH
-       SHA256=b2fd89ad5fa71c3d7a31d134ca0b4b2517e475879eaee33de80e9655b6337431
+function(MkDownloadMeasurementKitMkCurl)
+  message(STATUS "Downloading measurement-kit/mkcurl")
+  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkcurl/v0.5.0/mkcurl.h
+       "${CMAKE_CURRENT_BINARY_DIR}/mkcurl.h" EXPECTED_HASH
+       SHA256=cc5a1b0a123615722b3aadaab48455cea8d0ea585df8e6c36f36518f82b32556
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 

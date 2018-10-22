@@ -29,6 +29,18 @@ Downloads the latest version of [github.com/adishavit/argh](
 https://github.com/adishavit/argh).
 
 ```cmake
+function(MkDownloadCaBundle)
+```
+
+Download CURL's CA bundle.
+
+```cmake
+function(MkDownloadGeoIP)
+```
+
+Download MaxMind's GeoLite2 databases.
+
+```cmake
 function(MkDownloadNlohmannJson)
 ```
 
@@ -41,6 +53,13 @@ function(MkDownloadCatchorgCatch2)
 
 Downloads the latest version of [github.com/catchorg/Catch2](
 https://github.com/catchorg/Catch2).
+
+```cmake
+function(MkDownloadMeasurementKitMkCurl)
+```
+
+Downloads the [github.com/measurement-kit/mkcurl](
+https://github.com/measurement-kit/mkcurl) header only library.
 
 ```cmake
 function(MkDownloadMeasurementKitPrebuiltWindowsCurl)
