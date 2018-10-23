@@ -79,9 +79,9 @@ endfunction()
 
 function(MkDownloadMeasurementKitMkCurl)
   message(STATUS "Downloading measurement-kit/mkcurl")
-  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkcurl/v0.6.0/mkcurl.h
+  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkcurl/v0.6.1/mkcurl.h
        "${CMAKE_CURRENT_BINARY_DIR}/mkcurl.h" EXPECTED_HASH
-       SHA256=dd21b76a68fa9091e944ad1bc7644f970c6d6183a997debb8927519b3db22c65
+       SHA256=f321fcd77f3d39b05fe0c44ebbd69318e03a689bdcc7e2223a676d4ca1ba1a1e
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
