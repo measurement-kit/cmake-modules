@@ -19,8 +19,8 @@ function(MkDownloadGeoIP)
   # Variables (you should change them when a new version is available)
   set(COUNTRY_SHA 8d4e607ba81cedd0b39d354a5237484da58f33f91d336c5386a6beb334e1811c)
   set(COUNTRY_DIRNAME "GeoLite2-Country_20181023")
-  set(ASN_SHA 20e271e30565282806fee14c26f157e6bc9d9aa0b66cfb7c2c0e8086befdfeb0)
-  set(ASN_DIRNAME "GeoLite2-ASN_20181016")
+  set(ASN_SHA 5b696b431a2e41a519348bc6b5454bf186b97ceb23872a49c78d46449078597a)
+  set(ASN_DIRNAME "GeoLite2-ASN_20181023")
   # Country
   file(DOWNLOAD https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz
        "${CMAKE_CURRENT_BINARY_DIR}/geolite2-country.tar.gz" EXPECTED_HASH
