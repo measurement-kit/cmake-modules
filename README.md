@@ -55,6 +55,13 @@ Downloads the latest version of [github.com/catchorg/Catch2](
 https://github.com/catchorg/Catch2).
 
 ```cmake
+function(MkDownloadMeasurementKitMkData)
+```
+
+Downloads the [github.com/measurement-kit/mkdata](
+https://github.com/measurement-kit/mkdata) header only library.
+
+```cmake
 function(MkDownloadMeasurementKitMkCurl)
 ```
 

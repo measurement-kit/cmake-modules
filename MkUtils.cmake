@@ -77,6 +77,14 @@ function(MkDownloadCatchorgCatch2)
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
+function(MkDownloadMeasurementKitMkData)
+  message(STATUS "Downloading measurement-kit/mkdata")
+  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkdata/v0.1.0/mkdata.h
+       "${CMAKE_CURRENT_BINARY_DIR}/mkdata.h" EXPECTED_HASH
+       SHA256=21bf7d3ccc8f3247c6bbe9be29f3043d0ca2825912a66e679f6d65734717d9e2
+       TLS_VERIFY ON SHOW_PROGRESS)
+endfunction()
+
 function(MkDownloadMeasurementKitMkCurl)
   message(STATUS "Downloading measurement-kit/mkcurl")
   file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkcurl/v0.7.0/mkcurl.h
