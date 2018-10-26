@@ -35,10 +35,10 @@ function(MkDownloadCaBundle)
 Download CURL's CA bundle.
 
 ```cmake
-function(MkDownloadGeoIP)
+function(MkDownloadMMDBDatabases)
 ```
 
-Download MaxMind's GeoLite2 databases.
+Download MaxMind's MMDB GeoLite2 databases.
 
 ```cmake
 function(MkDownloadNlohmannJson)
