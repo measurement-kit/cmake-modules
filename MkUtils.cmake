@@ -93,6 +93,22 @@ function(MkDownloadMeasurementKitMkCurl)
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
+function(MkDownloadMeasurementKitMkIPLookup)
+  message(STATUS "Downloading measurement-kit/mkiplookup")
+  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkiplookup/v0.1.0/mkiplookup.h
+       "${CMAKE_CURRENT_BINARY_DIR}/mkiplookup.h" EXPECTED_HASH
+       SHA256=3112be8123a3a6987763e852ce352743bc1af96eb4bcf2c6fad259e3874627d4
+       TLS_VERIFY ON SHOW_PROGRESS)
+endfunction()
+
+function(MkDownloadMeasurementKitMkMMDB)
+  message(STATUS "Downloading measurement-kit/mkmmdb")
+  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkmmdb/v0.1.0/mkmmdb.h
+       "${CMAKE_CURRENT_BINARY_DIR}/mkmmdb.h" EXPECTED_HASH
+       SHA256=04859b1d4cfec1a011c72fc71502b447cd194f61252f9cee2a7df0df00a705d0
+       TLS_VERIFY ON SHOW_PROGRESS)
+endfunction()
+
 function(MkDownloadMeasurementKitPrebuiltWindows_ NAME VERSION HASH)
   set(BASEURL "https://github.com/measurement-kit/prebuilt/releases/download")
   set(CHANNEL "testing")

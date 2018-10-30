@@ -69,6 +69,20 @@ Downloads the [github.com/measurement-kit/mkcurl](
 https://github.com/measurement-kit/mkcurl) header only library.
 
 ```cmake
+function(MkDownloadMeasurementKitMkIPLookup)
+```
+
+Downloads the [github.com/measurement-kit/mkiplookup](
+https://github.com/measurement-kit/mkiplookup) header only library.
+
+```cmake
+function(MkDownloadMeasurementKitMkMMDB)
+```
+
+Downloads the [github.com/measurement-kit/mkmmdb](
+https://github.com/measurement-kit/mkmmdb) header only library.
+
+```cmake
 function(MkDownloadMeasurementKitPrebuiltWindowsCurl)
 ```
 
