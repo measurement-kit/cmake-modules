@@ -19,7 +19,7 @@ function(MkDownloadMMDBDatabases)
   # Variables (you should change them when a new version is available)
   set(COUNTRY_SHA 8d4e607ba81cedd0b39d354a5237484da58f33f91d336c5386a6beb334e1811c)
   set(COUNTRY_DIRNAME "GeoLite2-Country_20181023")
-  set(ASN_SHA 5b696b431a2e41a519348bc6b5454bf186b97ceb23872a49c78d46449078597a)
+  set(ASN_SHA e30eec84af8b1d570701ab1beef5c8e0d6386619d49ecfa1445efeb621fd7a1c)
   set(ASN_DIRNAME "GeoLite2-ASN_20181023")
   # Country
   file(DOWNLOAD https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz
