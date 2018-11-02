@@ -81,7 +81,7 @@ function(MkDownloadMeasurementKitMkData)
   message(STATUS "Downloading measurement-kit/mkdata")
   file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkdata/v0.2.2/mkdata.h
        "${CMAKE_CURRENT_BINARY_DIR}/mkdata.h" EXPECTED_HASH
-       SHA256=29426172790bc2a1056873ac49080b85f10face0403746a454de197c42bfb90c
+       SHA256=cb92c099eb59b4c3e0836d7ac5126bc2c82e221e4e79233866ef037b29e7153b
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
