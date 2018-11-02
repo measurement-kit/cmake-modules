@@ -79,33 +79,33 @@ endfunction()
 
 function(MkDownloadMeasurementKitMkData)
   message(STATUS "Downloading measurement-kit/mkdata")
-  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkdata/v0.2.0/mkdata.h
+  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkdata/v0.2.2/mkdata.h
        "${CMAKE_CURRENT_BINARY_DIR}/mkdata.h" EXPECTED_HASH
-       SHA256=797d2e4004302071600f1259c1250a1476fb219d2bb59af49d0240eaa8af865d
+       SHA256=29426172790bc2a1056873ac49080b85f10face0403746a454de197c42bfb90c
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
 function(MkDownloadMeasurementKitMkCurl)
   message(STATUS "Downloading measurement-kit/mkcurl")
-  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkcurl/v0.8.1/mkcurl.h
+  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkcurl/v0.8.3/mkcurl.h
        "${CMAKE_CURRENT_BINARY_DIR}/mkcurl.h" EXPECTED_HASH
-       SHA256=10185ce12c18a31888bb812dd0b2d3c039ebd9bc2579876bce49c0b9d2445357
+       SHA256=acbb2050d11280e308ab436e6f8ae4b7bc742f4add2e6b24121ffe37a12282eb
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
 function(MkDownloadMeasurementKitMkIPLookup)
   message(STATUS "Downloading measurement-kit/mkiplookup")
-  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkiplookup/v0.1.0/mkiplookup.h
+  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkiplookup/v0.1.2/mkiplookup.h
        "${CMAKE_CURRENT_BINARY_DIR}/mkiplookup.h" EXPECTED_HASH
-       SHA256=3112be8123a3a6987763e852ce352743bc1af96eb4bcf2c6fad259e3874627d4
+       SHA256=556898c6c734443d5524b3a5d00f8424f93b70696ed850d233f4d24c540378f1
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
 function(MkDownloadMeasurementKitMkMMDB)
   message(STATUS "Downloading measurement-kit/mkmmdb")
-  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkmmdb/v0.1.0/mkmmdb.h
+  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkmmdb/v0.2.0/mkmmdb.h
        "${CMAKE_CURRENT_BINARY_DIR}/mkmmdb.h" EXPECTED_HASH
-       SHA256=04859b1d4cfec1a011c72fc71502b447cd194f61252f9cee2a7df0df00a705d0
+       SHA256=fc9e438a1f6aef20a1c13230bb199722bc0a20549b2c40dbb57fe03aeeea047b
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
