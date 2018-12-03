@@ -17,10 +17,10 @@ endfunction()
 function(MkDownloadMMDBDatabases)
   message(STATUS "Downloading MMDB databases")
   # Variables (you should change them when a new version is available)
-  set(COUNTRY_SHA 41321ccd92d6ec20f497a2b72a44855fcaa02dc19d12def98a52e548830679fb)
-  set(COUNTRY_DIRNAME "GeoLite2-Country_20181030")
-  set(ASN_SHA e30eec84af8b1d570701ab1beef5c8e0d6386619d49ecfa1445efeb621fd7a1c)
-  set(ASN_DIRNAME "GeoLite2-ASN_20181030")
+  set(COUNTRY_SHA a6d062d4ce2f930fc3459b443dd8e3d0fe9f4364deace3f67c2bb982c5ac4624)
+  set(COUNTRY_DIRNAME "GeoLite2-Country_20181127")
+  set(ASN_SHA aab476ae3479d3606cc88138834f44e1663a0c669bfdaf69eda6dd09eec84beb)
+  set(ASN_DIRNAME "GeoLite2-ASN_20181127")
   # Country
   file(DOWNLOAD https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz
        "${CMAKE_CURRENT_BINARY_DIR}/geolite2-country.tar.gz" EXPECTED_HASH
