@@ -8,9 +8,9 @@ endfunction()
 
 function(MkDownloadCaBundle)
   message(STATUS "Downloading CA bundle")
-  file(DOWNLOAD https://curl.haxx.se/ca/cacert-2018-06-20.pem
+  file(DOWNLOAD https://curl.haxx.se/ca/cacert-2018-10-17.pem
        "${CMAKE_CURRENT_BINARY_DIR}/ca-bundle.pem" EXPECTED_HASH
-       SHA256=238823cd92d3bcdd67c1c278536d6c282dd6b526ee6ee97efbf00ef31d8c5d79
+       SHA256=86695b1be9225c3cf882d283f05c944e3aabbc1df6428a4424269a93e997dc65
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
