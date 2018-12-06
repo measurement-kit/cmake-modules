@@ -87,9 +87,9 @@ endfunction()
 
 function(MkDownloadMeasurementKitMkMock)
   message(STATUS "Downloading measurement-kit/mkmock")
-  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkmock/v0.1.1/mkmock.hpp
+  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkmock/v0.1.2/mkmock.hpp
        "${CMAKE_CURRENT_BINARY_DIR}/mkmock.hpp" EXPECTED_HASH
-       SHA256=2b30f556c2826ca49971e7211fbac2e78422d099ce154843bf5c9b92589b6456
+       SHA256=02b8becaee36026a390a7df0ef55212d7a3a398c7d2cda0ab5006e3bb0980c46
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
