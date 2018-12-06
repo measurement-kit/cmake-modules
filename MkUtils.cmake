@@ -85,6 +85,14 @@ function(MkDownloadMeasurementKitMkData)
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
+function(MkDownloadMeasurementKitMkMock)
+  message(STATUS "Downloading measurement-kit/mkmock")
+  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkmock/v0.1.0/mkmock.hpp
+       "${CMAKE_CURRENT_BINARY_DIR}/mkmock.hpp" EXPECTED_HASH
+       SHA256=04f56711101a70fb85e8a7a413b43e4eb7419db71371842fb11dec4478aa5601
+       TLS_VERIFY ON SHOW_PROGRESS)
+endfunction()
+
 function(MkDownloadMeasurementKitMkCurl)
   message(STATUS "Downloading measurement-kit/mkcurl")
   file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkcurl/v0.8.3/mkcurl.h
