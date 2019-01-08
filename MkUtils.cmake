@@ -71,9 +71,9 @@ endfunction()
 
 function(MkDownloadCatchorgCatch2)
   message(STATUS "Downloading catchorg/Catch2")
-  file(DOWNLOAD https://github.com/catchorg/Catch2/releases/download/v2.5.0/catch.hpp
+  file(DOWNLOAD https://github.com/catchorg/Catch2/releases/download/v2.3.0/catch.hpp
        "${CMAKE_CURRENT_BINARY_DIR}/catch.hpp" EXPECTED_HASH
-       SHA256=a87d5c0417aaf1c3d16565244a1b643e1999d5838d842823731bc18560268f94
+       SHA256=5eb8532fd5ec0d28433eba8a749102fd1f98078c5ebf35ad607fb2455a000004
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
