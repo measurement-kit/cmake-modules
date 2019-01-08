@@ -1,16 +1,16 @@
 function(MkDownloadAdishavitArgh)
   message(STATUS "Downloading adishavit/argh")
-  file(DOWNLOAD https://raw.githubusercontent.com/adishavit/argh/v1.2.1/argh.h
+  file(DOWNLOAD https://raw.githubusercontent.com/adishavit/argh/v1.3.0/argh.h
        "${CMAKE_CURRENT_BINARY_DIR}/argh.h" EXPECTED_HASH
-       SHA256=ca14a63ea5be5b924019b4844218142936b6f4e3ef57dfe4c81ba35a7f07004e
+       SHA256=ddb7dfc18dcf90149735b76fb2cff101067453a1df1943a6911233cb7085980c
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
 function(MkDownloadCaBundle)
   message(STATUS "Downloading CA bundle")
-  file(DOWNLOAD https://curl.haxx.se/ca/cacert-2018-10-17.pem
+  file(DOWNLOAD https://curl.haxx.se/ca/cacert-2018-12-05.pem
        "${CMAKE_CURRENT_BINARY_DIR}/ca-bundle.pem" EXPECTED_HASH
-       SHA256=86695b1be9225c3cf882d283f05c944e3aabbc1df6428a4424269a93e997dc65
+       SHA256=4d89992b90f3e177ab1d895c00e8cded6c9009bec9d56981ff4f0a59e9cc56d6
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
@@ -63,25 +63,25 @@ endfunction()
 
 function(MkDownloadNlohmannJson)
   message(STATUS "Downloading nlohmann/json")
-  file(DOWNLOAD https://raw.githubusercontent.com/nlohmann/json/v3.1.2/single_include/nlohmann/json.hpp
+  file(DOWNLOAD https://raw.githubusercontent.com/nlohmann/json/v3.5.0/single_include/nlohmann/json.hpp
        "${CMAKE_CURRENT_BINARY_DIR}/json.hpp" EXPECTED_HASH
-       SHA256=fbdfec4b4cf63b3b565d09f87e6c3c183bdd45c5be1864d3fcb338f6f02c1733
+       SHA256=8a6dbf3bf01156f438d0ca7e78c2971bca50eec4ca6f0cf59adf3464c43bb9d5
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
 function(MkDownloadCatchorgCatch2)
   message(STATUS "Downloading catchorg/Catch2")
-  file(DOWNLOAD https://github.com/catchorg/Catch2/releases/download/v2.3.0/catch.hpp
+  file(DOWNLOAD https://github.com/catchorg/Catch2/releases/download/v2.5.0/catch.hpp
        "${CMAKE_CURRENT_BINARY_DIR}/catch.hpp" EXPECTED_HASH
-       SHA256=5eb8532fd5ec0d28433eba8a749102fd1f98078c5ebf35ad607fb2455a000004
+       SHA256=a87d5c0417aaf1c3d16565244a1b643e1999d5838d842823731bc18560268f94
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
 function(MkDownloadMeasurementKitMkData)
   message(STATUS "Downloading measurement-kit/mkdata")
-  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkdata/v0.2.2/mkdata.h
-       "${CMAKE_CURRENT_BINARY_DIR}/mkdata.h" EXPECTED_HASH
-       SHA256=cb92c099eb59b4c3e0836d7ac5126bc2c82e221e4e79233866ef037b29e7153b
+  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkdata/v0.3.0/mkdata.hpp
+       "${CMAKE_CURRENT_BINARY_DIR}/mkdata.hpp" EXPECTED_HASH
+       SHA256=96bb0384ecd7231a861111d8818a560b7d5ca83316cf7946a4f1a352db6ecfe3
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
@@ -95,9 +95,9 @@ endfunction()
 
 function(MkDownloadMeasurementKitMkCurl)
   message(STATUS "Downloading measurement-kit/mkcurl")
-  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkcurl/v0.8.3/mkcurl.h
-       "${CMAKE_CURRENT_BINARY_DIR}/mkcurl.h" EXPECTED_HASH
-       SHA256=acbb2050d11280e308ab436e6f8ae4b7bc742f4add2e6b24121ffe37a12282eb
+  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkcurl/v0.9.1/mkcurl.hpp
+       "${CMAKE_CURRENT_BINARY_DIR}/mkcurl.hpp" EXPECTED_HASH
+       SHA256=25cedc7b79bd4e5fbc87bc909f3e32f0f9f29d377d438cf246636025fbd6f991
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
@@ -111,9 +111,9 @@ endfunction()
 
 function(MkDownloadMeasurementKitMkMMDB)
   message(STATUS "Downloading measurement-kit/mkmmdb")
-  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkmmdb/v0.2.0/mkmmdb.h
-       "${CMAKE_CURRENT_BINARY_DIR}/mkmmdb.h" EXPECTED_HASH
-       SHA256=fc9e438a1f6aef20a1c13230bb199722bc0a20549b2c40dbb57fe03aeeea047b
+  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkmmdb/v0.3.0/mkmmdb.hpp
+       "${CMAKE_CURRENT_BINARY_DIR}/mkmmdb.hpp" EXPECTED_HASH
+       SHA256=39c0b6192a01bc58df49d08299ae47b492f4c113d86d525f2e73ece954daa116
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
