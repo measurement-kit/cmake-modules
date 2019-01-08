@@ -103,9 +103,9 @@ endfunction()
 
 function(MkDownloadMeasurementKitMkIPLookup)
   message(STATUS "Downloading measurement-kit/mkiplookup")
-  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkiplookup/v0.1.3/mkiplookup.h
-       "${CMAKE_CURRENT_BINARY_DIR}/mkiplookup.h" EXPECTED_HASH
-       SHA256=8c93056e53985586c5c8f44eb9523b6dc24221f26e5fe49f54d8b2c3c1f1bd6c
+  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkiplookup/v0.2.0/mkiplookup.hpp
+       "${CMAKE_CURRENT_BINARY_DIR}/mkiplookup.hpp" EXPECTED_HASH
+       SHA256=a815119250d09be5eff332289f90fd872910f3dc9f29bb4a5fe60e272b38174f
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
