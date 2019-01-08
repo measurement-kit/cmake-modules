@@ -62,6 +62,13 @@ Downloads the [github.com/measurement-kit/mkdata](
 https://github.com/measurement-kit/mkdata) header only library.
 
 ```cmake
+function(MkDownloadMeasurementKitMkMock)
+```
+
+Downloads the [github.com/measurement-kit/mkmock](
+https://github.com/measurement-kit/mkmock) header only library.
+
+```cmake
 function(MkDownloadMeasurementKitMkCurl)
 ```
 
@@ -86,9 +93,12 @@ https://github.com/measurement-kit/mkmmdb) header only library.
 function(MkDownloadMeasurementKitPrebuiltWindowsCurl)
 ```
 
-Downloads the latest version of [github.com/curl/curl](
+Downloads a recent version of [github.com/curl/curl](
 https://github.com/curl/curl) precompiled by us for the MSVC compiler. As
 such, this code should only be executed when compiling for MSVC.
+
+We do not guarantee that such version of CURL is current. We only use
+that for running regression tests on AppVeyor.
 
 The archive will be downloaded and extracted in the current binary directory
 creating a `MK_DIST/windows/curl/$version/$arch` tree.
@@ -109,10 +119,13 @@ Sets the following variables:
 function(MkDownloadMeasurementKitPrebuiltWindowsLibmaxminddb)
 ```
 
-Downloads the latest version of [github.com/maxmind/libmaxminddb](
+Downloads a recent version of [github.com/maxmind/libmaxminddb](
 https://github.com/maxmind/libmaxminddb) precompiled by us for the MSVC
 compiler. As such, this code should only be executed when compiling
 for MSVC.
+
+We do not guarantee that the downloaded software is the latest version
+since we only use it for running tests on AppVeyor.
 
 The archive will be downloaded and extracted in the current binary directory
 creating a `MK_DIST/windows/libmaxminddb/$version/$arch` tree.
