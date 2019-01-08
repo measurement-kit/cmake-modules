@@ -95,9 +95,9 @@ endfunction()
 
 function(MkDownloadMeasurementKitMkCurl)
   message(STATUS "Downloading measurement-kit/mkcurl")
-  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkcurl/v0.9.1/mkcurl.hpp
+  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkcurl/v0.9.2/mkcurl.hpp
        "${CMAKE_CURRENT_BINARY_DIR}/mkcurl.hpp" EXPECTED_HASH
-       SHA256=25cedc7b79bd4e5fbc87bc909f3e32f0f9f29d377d438cf246636025fbd6f991
+       SHA256=c9ddc132322cada3e443e15f6d2876b22490d7b491111ee45abeaf67c06cd596
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
@@ -111,9 +111,9 @@ endfunction()
 
 function(MkDownloadMeasurementKitMkMMDB)
   message(STATUS "Downloading measurement-kit/mkmmdb")
-  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkmmdb/v0.3.0/mkmmdb.hpp
+  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkmmdb/v0.3.1/mkmmdb.hpp
        "${CMAKE_CURRENT_BINARY_DIR}/mkmmdb.hpp" EXPECTED_HASH
-       SHA256=39c0b6192a01bc58df49d08299ae47b492f4c113d86d525f2e73ece954daa116
+       SHA256=a2525bd857a902b55a60dd02938f1f2b70920053f2b09bca287de2d2ab310c52
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
