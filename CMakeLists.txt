@@ -12,6 +12,7 @@ MkDownloadMMDBDatabases()
 MkDownloadNlohmannJson()
 MkDownloadCatchorgCatch2()
 
+MkDownloadMeasurementKitMkCollector()
 MkDownloadMeasurementKitMkData()
 MkDownloadMeasurementKitMkMock()
 MkDownloadMeasurementKitMkCurl()
