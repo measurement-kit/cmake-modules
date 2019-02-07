@@ -135,9 +135,9 @@ endfunction()
 
 function(MkDownloadMeasurementKitMkMMDB)
   message(STATUS "Downloading measurement-kit/mkmmdb")
-  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkmmdb/v0.3.1/mkmmdb.hpp
+  file(DOWNLOAD https://raw.githubusercontent.com/measurement-kit/mkmmdb/v0.4.0/mkmmdb.hpp
        "${CMAKE_CURRENT_BINARY_DIR}/mkmmdb.hpp" EXPECTED_HASH
-       SHA256=a2525bd857a902b55a60dd02938f1f2b70920053f2b09bca287de2d2ab310c52
+       SHA256=c1cdcf2980c977a0d4abbdd447ddc19eefdfe6faa42b3be752d50f29930d4a87
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
