@@ -8,6 +8,7 @@ include(MkUtils)
 
 MkDownloadAdishavitArgh()
 MkDownloadCaBundle()
+MkDownloadHowardHinnantDate()
 MkDownloadMMDBDatabases()
 MkDownloadNlohmannJson()
 MkDownloadCatchorgCatch2()

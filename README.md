@@ -35,6 +35,13 @@ function(MkDownloadCaBundle)
 Download CURL's CA bundle.
 
 ```cmake
+function(MkDownloadHowardHinnantDate)
+```
+
+Downloads the latest version of [github.com/HowardHinnant/date](
+https://github.com/HowardHinnant/date).
+
+```cmake
 function(MkDownloadMMDBDatabases)
 ```
 

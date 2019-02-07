@@ -14,6 +14,14 @@ function(MkDownloadCaBundle)
        TLS_VERIFY ON SHOW_PROGRESS)
 endfunction()
 
+function(MkDownloadHowardHinnantDate)
+  message(STATUS "Downloading HowardInnant/date")
+  file(DOWNLOAD https://raw.githubusercontent.com/HowardHinnant/date/v2.4.1/include/date/date.h
+       "${CMAKE_CURRENT_BINARY_DIR}/date.h" EXPECTED_HASH
+       SHA256=07aa75752540023ccccab178ed193f536c9d032cbbda997159af9f339d331eda
+       TLS_VERIFY ON SHOW_PROGRESS)
+endfunction()
+
 function(MkDownloadMMDBDatabases)
   message(STATUS "Downloading MMDB databases")
   # Variables (you should change them when a new version is available)
