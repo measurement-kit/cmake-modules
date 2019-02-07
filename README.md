@@ -62,6 +62,13 @@ Downloads the latest version of [github.com/catchorg/Catch2](
 https://github.com/catchorg/Catch2).
 
 ```cmake
+function(MkDownloadMeasurementKitMkBouncer)
+```
+
+Downloads the [github.com/measurement-kit/mkbouncer](
+https://github.com/measurement-kit/mkbouncer) header only library.
+
+```cmake
 function(MkDownloadMeasurementKitMkCollector)
 ```
 
