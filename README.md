@@ -1,5 +1,7 @@
 # Useful CMake Modules
 
+⚠️⚠️⚠️⚠️⚠️⚠️⚠️: Deprecated and archived repository!
+
 This repository contains CMake modules used within Measurement Kit.
 
 ## Usage
